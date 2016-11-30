@@ -38,14 +38,13 @@ namespace USB_Rubber_Ducky_Toolkit
             this.SetDelayTextBox = new System.Windows.Forms.TextBox();
             this.btnEncodeForm = new System.Windows.Forms.Button();
             this.btnExecuteButton = new System.Windows.Forms.Button();
+            this.btnDebug = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createRestorePointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createSystemRestorePointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDebug = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +115,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // btnExecuteButton
             // 
+            this.btnExecuteButton.Enabled = false;
             this.btnExecuteButton.Location = new System.Drawing.Point(696, 167);
             this.btnExecuteButton.Name = "btnExecuteButton";
             this.btnExecuteButton.Size = new System.Drawing.Size(134, 33);
@@ -123,57 +123,6 @@ namespace USB_Rubber_Ducky_Toolkit
             this.btnExecuteButton.Text = "Execute Script";
             this.btnExecuteButton.UseVisualStyleBackColor = true;
             this.btnExecuteButton.Click += new System.EventHandler(this.btnExecuteButton_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(999, 35);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.createRestorePointToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // createRestorePointToolStripMenuItem
-            // 
-            this.createRestorePointToolStripMenuItem.Name = "createRestorePointToolStripMenuItem";
-            this.createRestorePointToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
-            this.createRestorePointToolStripMenuItem.Text = "Create Restore Point";
-            this.createRestorePointToolStripMenuItem.Click += new System.EventHandler(this.createRestorePointToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(51, 29);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // btnDebug
             // 
@@ -196,6 +145,48 @@ namespace USB_Rubber_Ducky_Toolkit
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(999, 33);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.createSystemRestorePointToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(318, 30);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click_1);
+            // 
+            // createSystemRestorePointToolStripMenuItem
+            // 
+            this.createSystemRestorePointToolStripMenuItem.Name = "createSystemRestorePointToolStripMenuItem";
+            this.createSystemRestorePointToolStripMenuItem.Size = new System.Drawing.Size(318, 30);
+            this.createSystemRestorePointToolStripMenuItem.Text = "Create System Restore Point";
+            this.createSystemRestorePointToolStripMenuItem.Click += new System.EventHandler(this.createSystemRestorePointToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click_1);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -208,9 +199,10 @@ namespace USB_Rubber_Ducky_Toolkit
             this.Controls.Add(this.SetDelayTextBox);
             this.Controls.Add(this.btnEncodeForm);
             this.Controls.Add(this.btnExecuteButton);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "formMain";
             this.Text = "USB Rubber Ducky Toolkit";
             this.menuStrip1.ResumeLayout(false);
@@ -245,14 +237,13 @@ namespace USB_Rubber_Ducky_Toolkit
         private System.Windows.Forms.TextBox SetDelayTextBox;
         private System.Windows.Forms.Button btnEncodeForm;
         private System.Windows.Forms.Button btnExecuteButton;
+        private System.Windows.Forms.Button btnDebug;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createRestorePointToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createSystemRestorePointToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button btnDebug;
-        private System.Windows.Forms.Button btnExit;
     }
 }
 

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace USB_Rubber_Ducky_Toolkit
@@ -17,11 +10,13 @@ namespace USB_Rubber_Ducky_Toolkit
         {
             InitializeComponent();
         }
+
         //Variables
-        string FilePath = "";
-        string directoryPath = "";
-        DuckyScriptProcessing keyboard = new DuckyScriptProcessing();
-        formEncoding formEncoding = new formEncoding();
+        private string FilePath = "";
+        private string directoryPath = "";
+        private DuckyScriptProcessing keyboard = new DuckyScriptProcessing();
+        private formEncoding formEncoding = new formEncoding();
+
         //BUTTONS
         private void btnPath_Click(object sender, EventArgs e)
         {
@@ -57,6 +52,7 @@ namespace USB_Rubber_Ducky_Toolkit
                 MessageBox.Show("No problems found in code");
             }
         }
+
         private void btnExecuteButton_Click(object sender, EventArgs e)
         {
             keyboard.ReadFile(FilePath); //emulate code
@@ -67,15 +63,48 @@ namespace USB_Rubber_Ducky_Toolkit
             Close();
         }
 
-        private void createRestorePointToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
         //END OF BUTTONS
+        //MENU STRIP
+        private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FindFile();
+        }
+
+        private void createSystemRestorePointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("restore.vbs");//Creates system restore point
+        }
+
+        private void editToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //Opens current file in notepad
+            if (FilePath != "")
+            { //Opens file in notepad
+                try
+                {
+                    System.Diagnostics.Process.Start("notepad.exe", FilePath);
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show("Problem opening notepad.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a file before you try to edit it.");
+            }
+        }
+
+        //END OF MENU STRIP
         public string getDuckyScriptLocation()
         {
             return FilePath; //Give file path to different forms
         }
+
         private void FindFile() //Lets user select script file
         {
             Stream myStream = null;
@@ -98,11 +127,9 @@ namespace USB_Rubber_Ducky_Toolkit
                             btnDebug.Enabled = true; //enable validate button
                             btnEncodeForm.Enabled = true; //enable encoder button
                             PathLabel.Text = FilePath; //display path
-
                         }
                     }
                 }
-
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);

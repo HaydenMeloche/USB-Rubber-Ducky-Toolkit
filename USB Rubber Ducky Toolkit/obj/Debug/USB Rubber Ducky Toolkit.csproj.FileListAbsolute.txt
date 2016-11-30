@@ -8,3 +8,13 @@ C:\Users\Hayden Meloche\Desktop\USB Rubber Ducky Toolkit\USB Rubber Ducky Toolki
 C:\Users\Hayden Meloche\Desktop\USB Rubber Ducky Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.pdb
 C:\Users\Hayden Meloche\Desktop\USB Rubber Ducky Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.formMain.resources
 C:\Users\Hayden Meloche\Desktop\USB Rubber Ducky Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.formEncoding.resources
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.exe.config
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.exe
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.pdb
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.exe
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.pdb
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.csprojResolveAssemblyReference.cache
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.formEncoding.resources
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.formMain.resources
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.Properties.Resources.resources
+G:\Coding\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.csproj.GenerateResource.Cache

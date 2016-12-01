@@ -52,9 +52,9 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             this.btnPath.Location = new System.Drawing.Point(12, 38);
             this.btnPath.Name = "btnPath";
-            this.btnPath.Size = new System.Drawing.Size(120, 33);
+            this.btnPath.Size = new System.Drawing.Size(166, 33);
             this.btnPath.TabIndex = 12;
-            this.btnPath.Text = "Choose Path";
+            this.btnPath.Text = "Load DuckyScript";
             this.btnPath.UseVisualStyleBackColor = true;
             this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
             // 

@@ -14,7 +14,7 @@ namespace USB_Rubber_Ducky_Toolkit
         //Variables
         private string FilePath = "";
         private string directoryPath = "";
-        private DuckyScriptProcessing keyboard = new DuckyScriptProcessing();
+        private DuckyScriptProcessing DuckyScriptProcessing = new DuckyScriptProcessing();
         private formEncoding formEncoding = new formEncoding();
 
         //BUTTONS
@@ -29,7 +29,7 @@ namespace USB_Rubber_Ducky_Toolkit
             if (int.TryParse(SetDelayTextBox.Text, out DefaultDelay))
             {
                 DefaultDelay = Convert.ToInt32(SetDelayTextBox.Text);
-                keyboard.SetDelay(DefaultDelay);
+                DuckyScriptProcessing.SetDelay(DefaultDelay);
                 MessageBox.Show("The delay between each command is now set to " + DefaultDelay + "ms");
             }
             else
@@ -45,7 +45,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnDebug_Click(object sender, EventArgs e)
         {
-            if (keyboard.validateCode(FilePath) == true) //Validate code
+            if (DuckyScriptProcessing.validateCode(FilePath) == true) //Validate code
             {
                 btnExecuteButton.Enabled = true;
                 btnEncodeForm.Enabled = true;
@@ -55,7 +55,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnExecuteButton_Click(object sender, EventArgs e)
         {
-            keyboard.ReadFile(FilePath); //emulate code
+            DuckyScriptProcessing.ReadFile(FilePath); //emulate code
         }
 
         private void btnExit_Click(object sender, EventArgs e)

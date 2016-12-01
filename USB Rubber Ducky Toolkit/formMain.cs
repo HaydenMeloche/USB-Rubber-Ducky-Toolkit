@@ -12,7 +12,7 @@ namespace USB_Rubber_Ducky_Toolkit
         }
 
         //Variables
-        private string FilePath = "";
+        public static string FilePath = "";
         private string directoryPath = "";
         private DuckyScriptProcessing DuckyScriptProcessing = new DuckyScriptProcessing();
         private formEncoding formEncoding = new formEncoding();
@@ -86,7 +86,7 @@ namespace USB_Rubber_Ducky_Toolkit
                 }
                 catch (IOException ex)
                 {
-                    MessageBox.Show("Problem opening notepad.");
+                    MessageBox.Show("Problem opening notepad." + ex);
                 }
                 catch (Exception ex)
                 {
@@ -100,10 +100,7 @@ namespace USB_Rubber_Ducky_Toolkit
         }
 
         //END OF MENU STRIP
-        public string getDuckyScriptLocation()
-        {
-            return FilePath; //Give file path to different forms
-        }
+        
 
         private void FindFile() //Lets user select script file
         {

@@ -17,11 +17,13 @@ namespace USB_Rubber_Ducky_Toolkit
         public formEncoding()
         {
             InitializeComponent();
+            
         }
         //Varibles
         string FilePath = "";
         string savePathLocation = "";
         string outPutFilePath = "";
+        
         //string userCode = MainForm.SendDuckyLocation();
         string directoryPath = "";
         //BUTTONS
@@ -32,18 +34,32 @@ namespace USB_Rubber_Ducky_Toolkit
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 outPutFilePath = folderBrowserDialog1.SelectedPath;
-
+                Console.WriteLine("Output location set to " + outPutFilePath);
             }
         }
 
         private void btnEncode_Click(object sender, EventArgs e)
         {
-            EncodeToBin();
+            //EncodeToBin();
+            moveScriptToInstallFolder();
         }
         //END OF BUTTONS
+        public void moveScriptToInstallFolder()
+        {
+            formMain formMain = new formMain();
+            string installfolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
+            string fileToCopy = formMain.FilePath; //gets the location of the ducky script
+            Console.WriteLine("File is located at " + fileToCopy);
+            File.Copy(fileToCopy,installfolder, true);
+
+
+        }
+
+
         private void EncodeToBin()
         {
             string outputfilename = txtboxFileName.Text;
+            
             //start cmd and run java file passing duckyscript to it
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";

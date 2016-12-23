@@ -13,10 +13,8 @@ namespace USB_Rubber_Ducky_Toolkit
         private int defaultdelayvalue;
         private string lastCommand;
         private string lastKey;
-
-        private string[] validCommands = new string[24] { "TAB","REM", "DEFAULT_DELAY", "DEFAULTDELAY", "DELAY", "STRING", "WINDOWS", "GUI", "MENU", "APP", "SHIFT", "ALT","CONTROL" , "CTRL", "DOWN",
-            "DOWNARROW", "UP", "UPARROW", "LEFT", "LEFTARROW", "RIGHT", "RIGHTARROW","REPLAY", "ENTER"}; //array of valid commands
-
+        Validation validation = new Validation();
+        
         private string[] validKeys = new string[29] { "SHIFT" ,"HOME", "DELETE","INSERT","PAGEUP","PAGEDOWN","WINDOWS","GUI","UPARROW","DOWNARROW","LEFTARROW","RIGHTARROW","TAB","END","ESCAPE","SPACE","TAB",
         "F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"}; //array of valid keys
 
@@ -83,10 +81,29 @@ namespace USB_Rubber_Ducky_Toolkit
             {
                 string[] words = currentLine.Split(' ');
                 string command = words[0];
-
-                if (!validCommands.Contains(command))
+                string keys = "";
+                int flag = 0;
+                for (int i = 1; i < words.Length; i++)
                 {
-                    MessageBox.Show("Error in code. Please check line " + currentLineNum);
+                    if (flag == 0)
+                    {
+                        keys += words[i];
+                        flag++;
+                    }
+                    else
+                    {
+                        keys += " " + words[i];
+                    }
+                }
+
+                //if (!validCommands.Contains(command))
+                //{
+                //    MessageBox.Show("Error in code. Please check line " + currentLineNum);
+                //    return false;
+                //}
+                bool result = validation.LineCheck(command,keys,currentLineNum);
+                if (result == false)
+                {
                     return false;
                 }
                 currentLineNum++;

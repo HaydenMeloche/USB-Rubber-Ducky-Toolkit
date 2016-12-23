@@ -40,29 +40,31 @@
             // 
             // txtboxFileName
             // 
-            this.txtboxFileName.Location = new System.Drawing.Point(550, 144);
-            this.txtboxFileName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtboxFileName.Location = new System.Drawing.Point(962, 251);
+            this.txtboxFileName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtboxFileName.Name = "txtboxFileName";
-            this.txtboxFileName.Size = new System.Drawing.Size(202, 26);
+            this.txtboxFileName.Size = new System.Drawing.Size(356, 38);
             this.txtboxFileName.TabIndex = 15;
             this.txtboxFileName.Text = "inject.bin";
             // 
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(546, 175);
-            this.lblDestination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDestination.Location = new System.Drawing.Point(956, 309);
+            this.lblDestination.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(263, 60);
+            this.lblDestination.Size = new System.Drawing.Size(467, 96);
             this.lblDestination.TabIndex = 14;
             this.lblDestination.Text = "Enter custom name above if desired\r\nExample: mycoolcode.bin\r\ninject.bin is defaul" +
     "t\r\n";
             // 
             // btnEncode
             // 
-            this.btnEncode.Location = new System.Drawing.Point(299, 216);
+            this.btnEncode.Enabled = false;
+            this.btnEncode.Location = new System.Drawing.Point(532, 335);
+            this.btnEncode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEncode.Name = "btnEncode";
-            this.btnEncode.Size = new System.Drawing.Size(164, 45);
+            this.btnEncode.Size = new System.Drawing.Size(292, 70);
             this.btnEncode.TabIndex = 13;
             this.btnEncode.Text = "Encode to Bin FIle";
             this.btnEncode.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 42);
+            this.label2.Location = new System.Drawing.Point(306, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(455, 80);
+            this.label2.Size = new System.Drawing.Size(825, 128);
             this.label2.TabIndex = 10;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -81,17 +84,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(270, 9);
+            this.label1.Location = new System.Drawing.Point(480, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 32);
+            this.label1.Size = new System.Drawing.Size(462, 54);
             this.label1.TabIndex = 9;
             this.label1.Text = "DuckyScript Encoder";
             // 
             // btnOutputButton
             // 
-            this.btnOutputButton.Location = new System.Drawing.Point(550, 116);
+            this.btnOutputButton.Location = new System.Drawing.Point(959, 198);
+            this.btnOutputButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnOutputButton.Name = "btnOutputButton";
-            this.btnOutputButton.Size = new System.Drawing.Size(202, 26);
+            this.btnOutputButton.Size = new System.Drawing.Size(359, 40);
             this.btnOutputButton.TabIndex = 16;
             this.btnOutputButton.Text = "Select Output Location";
             this.btnOutputButton.UseVisualStyleBackColor = true;
@@ -99,15 +104,16 @@
             // 
             // formEncoding
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 294);
+            this.ClientSize = new System.Drawing.Size(1527, 456);
             this.Controls.Add(this.txtboxFileName);
             this.Controls.Add(this.lblDestination);
             this.Controls.Add(this.btnEncode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOutputButton);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "formEncoding";
             this.Text = "formEncoding";
             this.ResumeLayout(false);

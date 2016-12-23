@@ -32,7 +32,7 @@ namespace USB_Rubber_Ducky_Toolkit
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 outPutFilePath = folderBrowserDialog1.SelectedPath;
-
+                btnEncode.Enabled = true;
             }
         }
 

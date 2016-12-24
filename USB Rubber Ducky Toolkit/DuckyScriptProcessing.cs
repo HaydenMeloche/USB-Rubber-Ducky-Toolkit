@@ -14,10 +14,7 @@ namespace USB_Rubber_Ducky_Toolkit
         private string lastCommand;
         private string lastKey;
         Validation validation = new Validation();
-        
-        private string[] validKeys = new string[29] { "SHIFT" ,"HOME", "DELETE","INSERT","PAGEUP","PAGEDOWN","WINDOWS","GUI","UPARROW","DOWNARROW","LEFTARROW","RIGHTARROW","TAB","END","ESCAPE","SPACE","TAB",
-        "F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"}; //array of valid keys
-
+                
         public void SetDelay(int delay)
         {
             if (delay > 1)

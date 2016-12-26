@@ -22,6 +22,7 @@ namespace USB_Rubber_Ducky_Toolkit
         string FilePath = "";
         string savePathLocation = "";
         string outPutFilePath = "";
+        string outputName = "inject.bin";
         //string userCode = MainForm.SendDuckyLocation();
         string directoryPath = "";
         //formMain mainForm = new formMain();
@@ -54,7 +55,15 @@ namespace USB_Rubber_Ducky_Toolkit
             cmd.StartInfo.CreateNoWindow = true;
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
-            cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "helloworld.txt" + "\"");
+            if (txtboxFileName.Text != "inject.bin")
+            {
+                outputName = txtboxFileName.Text;
+                cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o " + outputName);
+            }
+            else
+            {
+                cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\"");
+            }
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
@@ -64,7 +73,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
             outPutFilePath = Path.Combine(directoryPath, outputfilename);
             Console.WriteLine(outPutFilePath);
-            MessageBox.Show(File.Exists("inject.bin") ? "Bin file created sucessfully." : "Error creating file.");
+            MessageBox.Show(File.Exists(outputName) ? "Bin file created sucessfully." : "Error creating file.");
         }
         public void getScriptDirectory(string directoryScriptPath)
         {

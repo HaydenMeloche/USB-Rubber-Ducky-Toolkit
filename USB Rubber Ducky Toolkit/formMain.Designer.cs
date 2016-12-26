@@ -86,6 +86,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // btnDelay
             // 
+            this.btnDelay.Enabled = false;
             this.btnDelay.Location = new System.Drawing.Point(25, 152);
             this.btnDelay.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnDelay.Name = "btnDelay";
@@ -97,6 +98,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // SetDelayTextBox
             // 
+            this.SetDelayTextBox.Enabled = false;
             this.SetDelayTextBox.Location = new System.Drawing.Point(245, 160);
             this.SetDelayTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.SetDelayTextBox.Name = "SetDelayTextBox";
@@ -159,7 +161,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1789, 51);
+            this.menuStrip1.Size = new System.Drawing.Size(1723, 51);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,7 +199,9 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1789, 344);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1723, 327);
             this.Controls.Add(this.btnPath);
             this.Controls.Add(this.PathLabel);
             this.Controls.Add(this.label2);
@@ -210,6 +214,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(1755, 415);
             this.Name = "formMain";
             this.Text = "USB Rubber Ducky Toolkit";
             this.menuStrip1.ResumeLayout(false);

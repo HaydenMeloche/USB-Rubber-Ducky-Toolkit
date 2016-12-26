@@ -36,12 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnOutputButton = new System.Windows.Forms.Button();
-            this.lblPath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtboxFileName
             // 
-            this.txtboxFileName.Location = new System.Drawing.Point(962, 251);
+            this.txtboxFileName.Location = new System.Drawing.Point(571, 266);
             this.txtboxFileName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtboxFileName.Name = "txtboxFileName";
             this.txtboxFileName.Size = new System.Drawing.Size(356, 38);
@@ -51,7 +50,7 @@
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(956, 309);
+            this.lblDestination.Location = new System.Drawing.Point(517, 309);
             this.lblDestination.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblDestination.Name = "lblDestination";
             this.lblDestination.Size = new System.Drawing.Size(467, 96);
@@ -62,7 +61,7 @@
             // btnEncode
             // 
             this.btnEncode.Enabled = false;
-            this.btnEncode.Location = new System.Drawing.Point(532, 335);
+            this.btnEncode.Location = new System.Drawing.Point(148, 234);
             this.btnEncode.Margin = new System.Windows.Forms.Padding(5);
             this.btnEncode.Name = "btnEncode";
             this.btnEncode.Size = new System.Drawing.Size(292, 70);
@@ -74,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 65);
+            this.label2.Location = new System.Drawing.Point(142, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(825, 128);
@@ -85,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 14);
+            this.label1.Location = new System.Drawing.Point(377, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 54);
@@ -94,31 +93,20 @@
             // 
             // btnOutputButton
             // 
-            this.btnOutputButton.Location = new System.Drawing.Point(959, 198);
+            this.btnOutputButton.Location = new System.Drawing.Point(571, 198);
             this.btnOutputButton.Margin = new System.Windows.Forms.Padding(5);
             this.btnOutputButton.Name = "btnOutputButton";
-            this.btnOutputButton.Size = new System.Drawing.Size(359, 40);
+            this.btnOutputButton.Size = new System.Drawing.Size(359, 54);
             this.btnOutputButton.TabIndex = 16;
             this.btnOutputButton.Text = "Select Output Location";
             this.btnOutputButton.UseVisualStyleBackColor = true;
             this.btnOutputButton.Click += new System.EventHandler(this.btnOutputButton_Click);
             // 
-            // lblPath
-            // 
-            this.lblPath.AutoSize = true;
-            this.lblPath.Location = new System.Drawing.Point(31, 198);
-            this.lblPath.Name = "lblPath";
-            this.lblPath.Size = new System.Drawing.Size(93, 32);
-            this.lblPath.TabIndex = 17;
-            this.lblPath.Text = "label3";
-            this.lblPath.Click += new System.EventHandler(this.lblPath_Click);
-            // 
             // formEncoding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1527, 456);
-            this.Controls.Add(this.lblPath);
+            this.ClientSize = new System.Drawing.Size(1132, 414);
             this.Controls.Add(this.txtboxFileName);
             this.Controls.Add(this.lblDestination);
             this.Controls.Add(this.btnEncode);
@@ -142,6 +130,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button btnOutputButton;
-        public System.Windows.Forms.Label lblPath;
     }
 }

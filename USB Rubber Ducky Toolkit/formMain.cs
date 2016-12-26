@@ -40,7 +40,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
-            //need to copy script over to install folder and then have formEncode use it
+            File.Copy(FilePath,"script.txt", true);
             formEncoding.Show();//show encoding form
         }
 
@@ -123,6 +123,8 @@ namespace USB_Rubber_Ducky_Toolkit
                             directoryPath = Path.GetDirectoryName(FilePath);
                             formEncoding.getScriptDirectory(directoryPath);
                             btnDebug.Enabled = true; //enable validate button
+                            SetDelayTextBox.Enabled = true; //enable delay txt box
+                            btnDelay.Enabled = true; //enable delay button 
                             btnEncodeForm.Enabled = true; //enable encoder button
                             PathLabel.Text = FilePath; //display path
                         }

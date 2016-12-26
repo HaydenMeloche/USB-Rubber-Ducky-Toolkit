@@ -312,7 +312,7 @@ namespace USB_Rubber_Ducky_Toolkit
                     }
                     break;
             }
-            if (command != "REPLAY") //Basically if the last function wasn't replay. Make the current command the last one
+            if (command != "REPLAY" && command != "REM") //Basically if the last function wasn't replay/rem. Make the current command the last one
             {
                 setLastCommand(command, keys);  //Used for the repeat function
             }

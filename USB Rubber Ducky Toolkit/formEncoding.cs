@@ -24,6 +24,7 @@ namespace USB_Rubber_Ducky_Toolkit
         string outPutFilePath = "";
         //string userCode = MainForm.SendDuckyLocation();
         string directoryPath = "";
+        //formMain mainForm = new formMain();
         //BUTTONS
         
 
@@ -68,6 +69,11 @@ namespace USB_Rubber_Ducky_Toolkit
         public void getScriptDirectory(string directoryScriptPath)
         {
             directoryPath = directoryScriptPath;
+        }
+
+        private void lblPath_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

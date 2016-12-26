@@ -13,7 +13,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         //Variables
         private string FilePath = "";
-        private string directoryPath = "";
+        public string directoryPath = "";
         private DuckyScriptProcessing DuckyScriptProcessing = new DuckyScriptProcessing();
         private formEncoding formEncoding = new formEncoding();
 
@@ -40,6 +40,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
+            //need to copy script over to install folder and then have formEncode use it
             formEncoding.Show();//show encoding form
         }
 
@@ -62,7 +63,7 @@ namespace USB_Rubber_Ducky_Toolkit
         {
             Close();
         }
-
+              
         //END OF BUTTONS
         //MENU STRIP
         private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -100,10 +101,7 @@ namespace USB_Rubber_Ducky_Toolkit
         }
 
         //END OF MENU STRIP
-        public string getDuckyScriptLocation()
-        {
-            return FilePath; //Give file path to different forms
-        }
+        
 
         private void FindFile() //Lets user select script file
         {

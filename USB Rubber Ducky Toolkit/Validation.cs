@@ -26,6 +26,8 @@ namespace USB_Rubber_Ducky_Toolkit
         {
             switch (command)
             {
+                case "REM":
+                    break;
                 case "STRING":
                     if (keys.Length <= 0)
                     {

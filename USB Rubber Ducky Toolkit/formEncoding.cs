@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace USB_Rubber_Ducky_Toolkit
@@ -20,20 +13,15 @@ namespace USB_Rubber_Ducky_Toolkit
         }
         //Varibles
         string FilePath = "";
-        string savePathLocation = "";
         string outPutFilePath = "";
         string outputName = "inject.bin";
-        //string userCode = MainForm.SendDuckyLocation();
-        string directoryPath = "";
-        //formMain mainForm = new formMain();
         //BUTTONS
-        
-
         private void btnOutputButton_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                outPutFilePath = folderBrowserDialog1.SelectedPath;
+                FilePath = folderBrowserDialog1.SelectedPath;
+                Console.WriteLine(FilePath);
                 btnEncode.Enabled = true;
             }
         }
@@ -55,30 +43,23 @@ namespace USB_Rubber_Ducky_Toolkit
             cmd.StartInfo.CreateNoWindow = true;
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
-            if (txtboxFileName.Text != "inject.bin")
-            {
-                outputName = txtboxFileName.Text;
-                cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o " + outputName);
-            }
-            else
-            {
-                cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\"");
-            }
+            outputName = txtboxFileName.Text;
+            Console.WriteLine(FilePath + outputName);
+            outPutFilePath = Path.Combine(FilePath, outputName);
+            cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o "+ outPutFilePath);
+            
+            
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
 
             Console.Out.WriteLine($"Output: {cmd.StandardOutput.ReadToEnd()}");
             Console.Out.WriteLine($"Error: {cmd.StandardError.ReadToEnd()}");
-
-            outPutFilePath = Path.Combine(directoryPath, outputfilename);
             Console.WriteLine(outPutFilePath);
-            MessageBox.Show(File.Exists(outputName) ? "Bin file created sucessfully." : "Error creating file.");
+            MessageBox.Show(File.Exists(outPutFilePath) ? "Bin file created sucessfully." : "Error creating file. Possible file permissions problem. Try running program in admin privleges");
+            outPutFilePath = "";
         }
-        public void getScriptDirectory(string directoryScriptPath)
-        {
-            directoryPath = directoryScriptPath;
-        }
+        
 
         private void lblPath_Click(object sender, EventArgs e)
         {

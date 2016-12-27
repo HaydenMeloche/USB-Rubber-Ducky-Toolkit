@@ -38,7 +38,6 @@ namespace USB_Rubber_Ducky_Toolkit
             string[] words = currentLine.Split(' ');
             string command = words[0];
             string keys = "";
-            //Console.WriteLine(command);
             int flag = 0;
             for (int i = 1; i < words.Length; i++)
             {
@@ -52,7 +51,6 @@ namespace USB_Rubber_Ducky_Toolkit
                     keys += " " + words[i];
                 }
             }
-            //Console.WriteLine(keys);
             KeyboardAction(command, keys);
         }
 

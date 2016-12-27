@@ -50,7 +50,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // btnPath
             // 
-            this.btnPath.Location = new System.Drawing.Point(21, 59);
+            this.btnPath.Location = new System.Drawing.Point(21, 79);
             this.btnPath.Margin = new System.Windows.Forms.Padding(5);
             this.btnPath.Name = "btnPath";
             this.btnPath.Size = new System.Drawing.Size(295, 51);
@@ -66,7 +66,8 @@ namespace USB_Rubber_Ducky_Toolkit
             // PathLabel
             // 
             this.PathLabel.AutoSize = true;
-            this.PathLabel.Location = new System.Drawing.Point(25, 115);
+            this.PathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PathLabel.Location = new System.Drawing.Point(25, 135);
             this.PathLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.PathLabel.Name = "PathLabel";
             this.PathLabel.Size = new System.Drawing.Size(228, 32);
@@ -76,21 +77,21 @@ namespace USB_Rubber_Ducky_Toolkit
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 212);
+            this.label2.Location = new System.Drawing.Point(25, 274);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1656, 32);
+            this.label2.Size = new System.Drawing.Size(847, 64);
             this.label2.TabIndex = 17;
-            this.label2.Text = "This emulator tends to run DuckyScript faster than a Ducky would. You can set a d" +
-    "elay between each function here (in miliseconds)";
+            this.label2.Text = "This emulator tends to run DuckyScript faster than a Ducky would. \r\nYou can set a" +
+    " delay between each function here (in miliseconds)";
             // 
             // btnDelay
             // 
             this.btnDelay.Enabled = false;
-            this.btnDelay.Location = new System.Drawing.Point(25, 152);
+            this.btnDelay.Location = new System.Drawing.Point(21, 186);
             this.btnDelay.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnDelay.Name = "btnDelay";
-            this.btnDelay.Size = new System.Drawing.Size(199, 53);
+            this.btnDelay.Size = new System.Drawing.Size(199, 61);
             this.btnDelay.TabIndex = 16;
             this.btnDelay.Text = "Set Delay";
             this.btnDelay.UseVisualStyleBackColor = true;
@@ -99,16 +100,16 @@ namespace USB_Rubber_Ducky_Toolkit
             // SetDelayTextBox
             // 
             this.SetDelayTextBox.Enabled = false;
-            this.SetDelayTextBox.Location = new System.Drawing.Point(245, 160);
+            this.SetDelayTextBox.Location = new System.Drawing.Point(234, 198);
             this.SetDelayTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.SetDelayTextBox.Name = "SetDelayTextBox";
-            this.SetDelayTextBox.Size = new System.Drawing.Size(116, 38);
+            this.SetDelayTextBox.Size = new System.Drawing.Size(199, 38);
             this.SetDelayTextBox.TabIndex = 15;
             // 
             // btnEncodeForm
             // 
             this.btnEncodeForm.Enabled = false;
-            this.btnEncodeForm.Location = new System.Drawing.Point(1339, 59);
+            this.btnEncodeForm.Location = new System.Drawing.Point(489, 79);
             this.btnEncodeForm.Margin = new System.Windows.Forms.Padding(5);
             this.btnEncodeForm.Name = "btnEncodeForm";
             this.btnEncodeForm.Size = new System.Drawing.Size(357, 51);
@@ -120,7 +121,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // btnExecuteButton
             // 
             this.btnExecuteButton.Enabled = false;
-            this.btnExecuteButton.Location = new System.Drawing.Point(1237, 259);
+            this.btnExecuteButton.Location = new System.Drawing.Point(362, 395);
             this.btnExecuteButton.Margin = new System.Windows.Forms.Padding(5);
             this.btnExecuteButton.Name = "btnExecuteButton";
             this.btnExecuteButton.Size = new System.Drawing.Size(238, 51);
@@ -132,7 +133,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // btnDebug
             // 
             this.btnDebug.Enabled = false;
-            this.btnDebug.Location = new System.Drawing.Point(1045, 259);
+            this.btnDebug.Location = new System.Drawing.Point(14, 395);
             this.btnDebug.Margin = new System.Windows.Forms.Padding(5);
             this.btnDebug.Name = "btnDebug";
             this.btnDebug.Size = new System.Drawing.Size(178, 51);
@@ -143,7 +144,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1486, 259);
+            this.btnExit.Location = new System.Drawing.Point(745, 395);
             this.btnExit.Margin = new System.Windows.Forms.Padding(5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(210, 51);
@@ -154,6 +155,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -161,7 +163,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1723, 51);
+            this.menuStrip1.Size = new System.Drawing.Size(969, 54);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,11 +199,10 @@ namespace USB_Rubber_Ducky_Toolkit
             // 
             // formMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1723, 327);
+            this.ClientSize = new System.Drawing.Size(969, 478);
             this.Controls.Add(this.btnPath);
             this.Controls.Add(this.PathLabel);
             this.Controls.Add(this.label2);
@@ -212,9 +213,9 @@ namespace USB_Rubber_Ducky_Toolkit
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.MinimumSize = new System.Drawing.Size(1755, 415);
             this.Name = "formMain";
             this.Text = "USB Rubber Ducky Toolkit";
             this.menuStrip1.ResumeLayout(false);

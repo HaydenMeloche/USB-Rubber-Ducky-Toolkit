@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 
+
 namespace USB_Rubber_Ducky_Toolkit
 {
     public partial class formMain : Form
@@ -41,7 +42,7 @@ namespace USB_Rubber_Ducky_Toolkit
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
             File.Copy(FilePath,"script.txt", true);
-            formEncoding.Show();//show encoding form
+            formEncoding.Show(); //show encoding form
         }
 
         private void btnDebug_Click(object sender, EventArgs e)
@@ -87,12 +88,9 @@ namespace USB_Rubber_Ducky_Toolkit
                 }
                 catch (IOException ex)
                 {
-                    MessageBox.Show("Problem opening notepad.");
+                    MessageBox.Show("Problem opening notepad. Error = " + ex);
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                
             }
             else
             {
@@ -121,12 +119,10 @@ namespace USB_Rubber_Ducky_Toolkit
                         {
                             FilePath = theDialog.FileName;
                             directoryPath = Path.GetDirectoryName(FilePath);
-                            formEncoding.getScriptDirectory(directoryPath);
                             btnDebug.Enabled = true; //enable validate button
                             SetDelayTextBox.Enabled = true; //enable delay txt box
                             btnDelay.Enabled = true; //enable delay button 
-                            btnEncodeForm.Enabled = true; //enable encoder button
-                            PathLabel.Text = FilePath; //display path
+                            PathLabel.Text = "DuckyScript Loaded!"; //display path
                         }
                     }
                 }

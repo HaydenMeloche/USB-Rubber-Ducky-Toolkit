@@ -10,3 +10,6 @@ Right now the toolkit allows you to test your code by emulating what the ducky w
 ##Contributing 
 If your interested in contributing and have any questions feel free to email me at 
 meloche.hayden@gmail.com
+
+[![forthebadge](http://forthebadge.com/images/badges/designed-in-ms-paint.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)

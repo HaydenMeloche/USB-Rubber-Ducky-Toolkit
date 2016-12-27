@@ -16,7 +16,7 @@ namespace USB_Rubber_Ducky_Toolkit
         private string FilePath = "";
         public string directoryPath = "";
         private DuckyScriptProcessing DuckyScriptProcessing = new DuckyScriptProcessing();
-        private formEncoding formEncoding = new formEncoding();
+        
 
         //BUTTONS
         private void btnPath_Click(object sender, EventArgs e)
@@ -42,6 +42,7 @@ namespace USB_Rubber_Ducky_Toolkit
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
             File.Copy(FilePath,"script.txt", true);
+            formEncoding formEncoding = new formEncoding();
             formEncoding.Show(); //show encoding form
         }
 

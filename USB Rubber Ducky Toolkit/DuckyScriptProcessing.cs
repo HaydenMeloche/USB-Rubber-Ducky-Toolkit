@@ -10,9 +10,10 @@ namespace USB_Rubber_Ducky_Toolkit
     internal class DuckyScriptProcessing
     {
         private bool defaultdelay = false;
-        private int defaultdelayvalue;
+        private int defaultdelayvalue = 0;
         private string lastCommand;
         private string lastKey;
+        private bool isCapsEnabled = false;
         Validation validation = new Validation();
                 
         public void SetDelay(int delay) //sets the global delay
@@ -112,7 +113,7 @@ namespace USB_Rubber_Ducky_Toolkit
                     case "DEFAULT_DELAY":
                     case "DEFAULTDELAY":
                         defaultdelay = true;
-                        defaultdelayvalue = Convert.ToInt32(keys);
+                        defaultdelayvalue += Convert.ToInt32(keys);
                         break;
 
                     case "DELAY":
@@ -230,6 +231,10 @@ namespace USB_Rubber_Ducky_Toolkit
                         CheckDefaultSleep();
                         switch (keys)
                         {
+                            case "ESC":
+                            case "ESCAPE":
+                                InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.ESCAPE);
+                                break;
                             case "PAUSE":
                                 InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.PAUSE);
                                 break;
@@ -248,6 +253,9 @@ namespace USB_Rubber_Ducky_Toolkit
 
                             case "RIGHTARROW":
                                 InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.RIGHT);
+                                break;
+                            case "SHIFT":
+                                InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.SHIFT);
                                 break;
 
                             default:
@@ -298,13 +306,23 @@ namespace USB_Rubber_Ducky_Toolkit
                         CheckDefaultSleep();
                         InputSimulator.SimulateKeyPress(VirtualKeyCode.UP);
                         break;
-
+                    
                     case "REPLAY":
                         CheckDefaultSleep();
                         for (int i = 0; i < Convert.ToInt32(keys); i++)
                         {
                             KeyboardAction(lastCommand, lastKey);
                         }
+                        break;
+
+                    case "DELETE":
+                        CheckDefaultSleep();
+                        InputSimulator.SimulateKeyPress(VirtualKeyCode.DELETE);
+                        break;
+
+                    case "CAPS":
+                        CheckDefaultSleep();
+                        isCapsEnabled = !isCapsEnabled;
                         break;
                 }
             }

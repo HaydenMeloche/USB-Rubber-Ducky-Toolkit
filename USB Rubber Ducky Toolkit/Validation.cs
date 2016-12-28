@@ -37,14 +37,23 @@ namespace USB_Rubber_Ducky_Toolkit
                     break;
                 case "DEFAULT_DELAY":
                 case "DEFAULTDELAY":
-                    try
+                    if (currentLine == 1)
                     {
-                        Convert.ToInt32(keys);
-                    } catch
+                        try
+                        {
+                            Convert.ToInt32(keys);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Error. On line " + currentLine + ", the command following defaultdelay is not a integer (ex 500)");
+                            return false;
+                        }
+                    } else
                     {
-                        MessageBox.Show("Error. On line " + currentLine + ", the command following defaultdelay is not a integer (ex 500)");
+                        MessageBox.Show("Error. DEFAULTDELAY is currently on line " + currentLine + ". It needs to be on line 1.");
                         return false;
                     }
+                    
                     break;
 
                 case "DELAY":
@@ -162,6 +171,20 @@ namespace USB_Rubber_Ducky_Toolkit
                     catch
                     {
                         MessageBox.Show("Error. On line " + currentLine + ", the command following REPLAY is not a integer (ex 500)");
+                        return false;
+                    }
+                    break; 
+                case "DELETE":
+                    if (keys.Length > 0)
+                    {
+                        MessageBox.Show("Error. On line " + currentLine + ", there is a command following DELETE.");
+                        return false;
+                    }
+                    break;
+                case "CAPS":
+                    if (keys.Length > 0)
+                    {
+                        MessageBox.Show("Error. On line " + currentLine + ", there is a command following CAPS.");
                         return false;
                     }
                     break;

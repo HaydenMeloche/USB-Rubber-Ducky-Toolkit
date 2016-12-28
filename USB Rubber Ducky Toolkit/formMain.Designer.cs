@@ -79,13 +79,14 @@ namespace USB_Rubber_Ducky_Toolkit
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 274);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 254);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(847, 64);
+            this.label2.Size = new System.Drawing.Size(924, 62);
             this.label2.TabIndex = 17;
             this.label2.Text = "This emulator tends to run DuckyScript faster than a Ducky would. \r\nYou can set a" +
-    " delay between each function here (in miliseconds)";
+    "n additional delay between each function here (in miliseconds)";
             // 
             // btnDelay
             // 

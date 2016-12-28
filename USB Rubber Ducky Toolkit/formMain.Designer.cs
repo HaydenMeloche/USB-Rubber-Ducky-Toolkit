@@ -46,6 +46,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.createSystemRestorePointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUAC = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +111,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // btnEncodeForm
             // 
             this.btnEncodeForm.Enabled = false;
-            this.btnEncodeForm.Location = new System.Drawing.Point(489, 79);
+            this.btnEncodeForm.Location = new System.Drawing.Point(598, 79);
             this.btnEncodeForm.Margin = new System.Windows.Forms.Padding(5);
             this.btnEncodeForm.Name = "btnEncodeForm";
             this.btnEncodeForm.Size = new System.Drawing.Size(357, 51);
@@ -206,6 +207,16 @@ namespace USB_Rubber_Ducky_Toolkit
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // btnUAC
+            // 
+            this.btnUAC.Location = new System.Drawing.Point(598, 151);
+            this.btnUAC.Name = "btnUAC";
+            this.btnUAC.Size = new System.Drawing.Size(356, 50);
+            this.btnUAC.TabIndex = 23;
+            this.btnUAC.Text = "UAC Enabled? Click Here";
+            this.btnUAC.UseVisualStyleBackColor = true;
+            this.btnUAC.Click += new System.EventHandler(this.btnUAC_Click);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
@@ -213,6 +224,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(969, 478);
+            this.Controls.Add(this.btnUAC);
             this.Controls.Add(this.btnPath);
             this.Controls.Add(this.PathLabel);
             this.Controls.Add(this.label2);
@@ -269,6 +281,7 @@ namespace USB_Rubber_Ducky_Toolkit
         private System.Windows.Forms.ToolStripMenuItem createSystemRestorePointToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button btnUAC;
     }
 }
 

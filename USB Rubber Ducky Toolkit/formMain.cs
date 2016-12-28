@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -86,7 +87,26 @@ namespace USB_Rubber_Ducky_Toolkit
         {
             Close();
         }
-              
+        private void btnUAC_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("UAC causes problems for DuckyToolkit." +
+                " For security reasons Windows doesn't allow programs to say Yes to UAC like a Ducky can. "+
+                "It is highly recommended you disable UAC while testing scripts. Optionally, you can wait for UAC to trigger and say yes yourself quickly."
+                + "\nWould you like to open the UAC control panel?", "More UAC, More Problems", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(@"C:\Windows\System32\UserAccountControlSettings.exe");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex);
+                    throw;
+                }
+            }
+            
+        }
         //END OF BUTTONS
         //MENU STRIP
         private void openToolStripMenuItem_Click_1(object sender, EventArgs e)

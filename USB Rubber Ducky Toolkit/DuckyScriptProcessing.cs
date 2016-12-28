@@ -123,7 +123,13 @@ namespace USB_Rubber_Ducky_Toolkit
 
                     case "STRING":
                         CheckDefaultSleep();
-                        InputSimulator.SimulateTextEntry(keys);
+                        if (isCapsEnabled == true)
+                        {
+                            InputSimulator.SimulateTextEntry((keys.ToUpper()));
+                        } else
+                        {
+                            InputSimulator.SimulateTextEntry(keys);
+                        }
                         break;
 
                     case "WINDOWS":
@@ -323,6 +329,10 @@ namespace USB_Rubber_Ducky_Toolkit
                     case "CAPS":
                         CheckDefaultSleep();
                         isCapsEnabled = !isCapsEnabled;
+                        break;
+                    case "SPACE":
+                        CheckDefaultSleep();
+                        InputSimulator.SimulateKeyPress(VirtualKeyCode.SPACE);
                         break;
                 }
             }

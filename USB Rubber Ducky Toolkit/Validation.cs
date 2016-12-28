@@ -188,8 +188,15 @@ namespace USB_Rubber_Ducky_Toolkit
                         return false;
                     }
                     break;
+                case "SPACE":
+                    if (keys.Length > 0)
+                    {
+                        MessageBox.Show("Error. On line " + currentLine + ", there is a command following SPACE.");
+                        return false;
+                    }
+                    break;
                 default:
-                    MessageBox.Show("Error. On line " + currentLine + ", the command you are trying to run was not reconized");
+                    MessageBox.Show("Error. On line " + currentLine + ", the command you are trying to run was not reconized.");
                     return false;
             }
             return true;

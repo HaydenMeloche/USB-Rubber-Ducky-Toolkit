@@ -40,7 +40,7 @@
             // 
             // txtboxFileName
             // 
-            this.txtboxFileName.Location = new System.Drawing.Point(571, 266);
+            this.txtboxFileName.Location = new System.Drawing.Point(18, 198);
             this.txtboxFileName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtboxFileName.Name = "txtboxFileName";
             this.txtboxFileName.Size = new System.Drawing.Size(356, 38);
@@ -50,18 +50,18 @@
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(517, 309);
+            this.lblDestination.Location = new System.Drawing.Point(388, 201);
             this.lblDestination.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(467, 96);
+            this.lblDestination.Size = new System.Drawing.Size(467, 64);
             this.lblDestination.TabIndex = 14;
-            this.lblDestination.Text = "Enter custom name above if desired\r\nExample: mycoolcode.bin\r\ninject.bin is defaul" +
-    "t\r\n";
+            this.lblDestination.Text = "Enter custom name above if desired\r\nExample: mycoolcode.bin\r\n";
+            this.lblDestination.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEncode
             // 
             this.btnEncode.Enabled = false;
-            this.btnEncode.Location = new System.Drawing.Point(148, 234);
+            this.btnEncode.Location = new System.Drawing.Point(82, 270);
             this.btnEncode.Margin = new System.Windows.Forms.Padding(5);
             this.btnEncode.Name = "btnEncode";
             this.btnEncode.Size = new System.Drawing.Size(292, 70);
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 65);
+            this.label2.Location = new System.Drawing.Point(14, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(825, 128);
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(377, 11);
+            this.label1.Location = new System.Drawing.Point(189, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 54);
@@ -93,10 +93,10 @@
             // 
             // btnOutputButton
             // 
-            this.btnOutputButton.Location = new System.Drawing.Point(571, 198);
+            this.btnOutputButton.Location = new System.Drawing.Point(384, 270);
             this.btnOutputButton.Margin = new System.Windows.Forms.Padding(5);
             this.btnOutputButton.Name = "btnOutputButton";
-            this.btnOutputButton.Size = new System.Drawing.Size(359, 54);
+            this.btnOutputButton.Size = new System.Drawing.Size(359, 70);
             this.btnOutputButton.TabIndex = 16;
             this.btnOutputButton.Text = "Select Output Location";
             this.btnOutputButton.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 414);
+            this.ClientSize = new System.Drawing.Size(855, 349);
             this.Controls.Add(this.txtboxFileName);
             this.Controls.Add(this.lblDestination);
             this.Controls.Add(this.btnEncode);
@@ -115,7 +115,7 @@
             this.Controls.Add(this.btnOutputButton);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "formEncoding";
-            this.Text = "formEncoding";
+            this.Text = "DuckScript Encoder";
             this.ResumeLayout(false);
             this.PerformLayout();
 

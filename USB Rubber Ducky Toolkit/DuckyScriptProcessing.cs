@@ -15,16 +15,16 @@ namespace USB_Rubber_Ducky_Toolkit
         private string lastKey;
         Validation validation = new Validation();
                 
-        public void SetDelay(int delay)
+        public void SetDelay(int delay) //sets the global delay
         {
             if (delay > 1)
             {
-                defaultdelay = true; //this is to let the emulator know after each command it must delay
+                defaultdelay = true; 
             }
             defaultdelayvalue = delay;
         }
 
-        public void ReadFile(String FilePath)
+        public void ReadFile(String FilePath) //Reads file and calls calculate for each line
         {
             string[] duckyFile = File.ReadAllLines(FilePath);
             foreach (var currentLine in duckyFile)
@@ -33,7 +33,7 @@ namespace USB_Rubber_Ducky_Toolkit
             }
         }
 
-        public void Calculate(string currentLine)
+        public void Calculate(string currentLine) //splits the line into command & keys
         {
             string[] words = currentLine.Split(' ');
             string command = words[0];
@@ -62,7 +62,7 @@ namespace USB_Rubber_Ducky_Toolkit
             }
         }
 
-        private void setLastCommand(string command, string keys)
+        private void setLastCommand(string command, string keys) //sets the last command (for replay function)
         {
             lastCommand = command;
             lastKey = keys;
@@ -90,12 +90,6 @@ namespace USB_Rubber_Ducky_Toolkit
                         keys += " " + words[i];
                     }
                 }
-
-                //if (!validCommands.Contains(command))
-                //{
-                //    MessageBox.Show("Error in code. Please check line " + currentLineNum);
-                //    return false;
-                //}
                 bool result = validation.LineCheck(command,keys,currentLineNum);
                 if (result == false)
                 {
@@ -310,7 +304,7 @@ namespace USB_Rubber_Ducky_Toolkit
                     }
                     break;
             }
-            if (command != "REPLAY" && command != "REM") //Basically if the last function wasn't replay/rem. Make the current command the last one
+            if (command != "REPLAY" && command != "REM") //If the last function wasn't replay/rem. Make the current command the last one
             {
                 setLastCommand(command, keys);  //Used for the repeat function
             }

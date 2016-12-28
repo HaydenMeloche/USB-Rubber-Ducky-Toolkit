@@ -1,6 +1,0 @@
-GUI r
-DELAY 500
-STRING notepad.exe
-ENTER
-DELAY 1000
-STRING Hello World!

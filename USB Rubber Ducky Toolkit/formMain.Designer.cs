@@ -45,6 +45,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createSystemRestorePointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,10 +89,10 @@ namespace USB_Rubber_Ducky_Toolkit
             // btnDelay
             // 
             this.btnDelay.Enabled = false;
-            this.btnDelay.Location = new System.Drawing.Point(21, 186);
+            this.btnDelay.Location = new System.Drawing.Point(21, 198);
             this.btnDelay.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnDelay.Name = "btnDelay";
-            this.btnDelay.Size = new System.Drawing.Size(199, 61);
+            this.btnDelay.Size = new System.Drawing.Size(199, 50);
             this.btnDelay.TabIndex = 16;
             this.btnDelay.Text = "Set Delay";
             this.btnDelay.UseVisualStyleBackColor = true;
@@ -159,11 +160,12 @@ namespace USB_Rubber_Ducky_Toolkit
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(969, 54);
+            this.menuStrip1.Size = new System.Drawing.Size(969, 51);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,11 +199,19 @@ namespace USB_Rubber_Ducky_Toolkit
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click_1);
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(112, 45);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(969, 478);
             this.Controls.Add(this.btnPath);
             this.Controls.Add(this.PathLabel);
@@ -218,6 +228,7 @@ namespace USB_Rubber_Ducky_Toolkit
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "formMain";
             this.Text = "USB Rubber Ducky Toolkit";
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -257,6 +268,7 @@ namespace USB_Rubber_Ducky_Toolkit
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createSystemRestorePointToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

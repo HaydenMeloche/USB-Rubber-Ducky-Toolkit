@@ -11,21 +11,35 @@ namespace USB_Rubber_Ducky_Toolkit
         {
             InitializeComponent();
         }
+        private void formMain_Load(object sender, EventArgs e)
+        {
+            if (!File.Exists("InputSimulator.dll"))
+            {
+                MessageBox.Show("Error finding InputSimulator.dll. Please keep this file in the same folder as this program.");
+                Close();
+            }
+            if (!File.Exists("duckencode.jar"))
+            {
+                MessageBox.Show("Error finding duckencode.jar. Please keep this file in the same folder as this program. The encoding feature has been disabled.");
+                duckEncodeFound = false;
+            }
+            
+        }
 
         //Variables
         private string FilePath = "";
         public string directoryPath = "";
+        private bool duckEncodeFound = true;
         private DuckyScriptProcessing DuckyScriptProcessing = new DuckyScriptProcessing();
         
-
         //BUTTONS
         private void btnPath_Click(object sender, EventArgs e)
         {
             FindFile(); //Opens file browser
         }
 
-        private void btnDelay_Click(object sender, EventArgs e)
-        {
+        private void btnDelay_Click(object sender, EventArgs e) 
+        {   //When delay button is pressed, validate it, the set it.
             int DefaultDelay;
             if (int.TryParse(SetDelayTextBox.Text, out DefaultDelay))
             {
@@ -41,9 +55,13 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
-            File.Copy(FilePath,"script.txt", true);
+            File.Copy(FilePath,"script.txt", true); //copy the script to 
             formEncoding formEncoding = new formEncoding();
-            formEncoding.Show(); //show encoding form
+            formEncoding.ShowDialog(); //show encoding form
+            if (File.Exists("script.txt"))
+            {
+                File.Delete("script.txt");
+            }
         }
 
         private void btnDebug_Click(object sender, EventArgs e)
@@ -51,7 +69,10 @@ namespace USB_Rubber_Ducky_Toolkit
             if (DuckyScriptProcessing.validateCode(FilePath) == true) //Validate code
             {
                 btnExecuteButton.Enabled = true;
-                btnEncodeForm.Enabled = true;
+                if (duckEncodeFound == true)
+                {
+                    btnEncodeForm.Enabled = true;
+                }
                 MessageBox.Show("No problems found in code");
             }
         }
@@ -99,8 +120,14 @@ namespace USB_Rubber_Ducky_Toolkit
             }
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.Show();
+        }
+
         //END OF MENU STRIP
-        
+
 
         private void FindFile() //Lets user select script file
         {
@@ -108,7 +135,6 @@ namespace USB_Rubber_Ducky_Toolkit
             OpenFileDialog theDialog = new OpenFileDialog();
             theDialog.Title = "Open DuckyScript Text File";
             theDialog.Filter = "TXT files|*.txt";
-            theDialog.InitialDirectory = @"C:\";
             theDialog.RestoreDirectory = true;
             if (theDialog.ShowDialog() == DialogResult.OK)
             {
@@ -133,5 +159,7 @@ namespace USB_Rubber_Ducky_Toolkit
                 }
             }
         }
+
+        
     }
 }

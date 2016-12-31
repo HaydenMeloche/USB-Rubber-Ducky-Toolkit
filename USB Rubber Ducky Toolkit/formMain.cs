@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 
@@ -80,6 +81,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnExecuteButton_Click(object sender, EventArgs e)
         {
+            Thread.Sleep(1000); //gives user a second to take hand off mouse
             DuckyScriptProcessing.ReadFile(FilePath); //emulate code
         }
 

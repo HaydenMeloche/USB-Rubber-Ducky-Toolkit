@@ -12,12 +12,7 @@ namespace USB_Rubber_Ducky_Toolkit
     {
         //This class is going to be used to validate the DuckyScript (instead of just checking the 1st word like before)
 
-        //private string[] validCommands = new string[24] { "TAB","REM", "DEFAULT_DELAY", "DEFAULTDELAY", "DELAY", "STRING", "WINDOWS", "GUI", "MENU", "APP", "SHIFT", "ALT","CONTROL" , "CTRL", "DOWN",
-        //    "DOWNARROW", "UP", "UPARROW", "LEFT", "LEFTARROW", "RIGHT", "RIGHTARROW","REPLAY", "ENTER"}; //array of valid commands
-        //private string[] validKeys = new string[23] {"WINDOWS","GUI","UPARROW","DOWNARROW","LEFTARROW","RIGHTARROW","TAB","END","ESCAPE","SPACE","TAB",
-        //"F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"}; //array of valid keys
         private string[] validFKeys = new string[12] { "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12" };
-        //private string[] uncommonValidKeys = new string[6] { "SHIFT", "HOME", "DELETE", "INSERT", "PAGEUP", "PAGEDOWN" };
         private string[] validShiftKeys = new string[12] { "DELETE", "HOME", "INSERT", "PAGEUP", "PAGEDOWN", "WINDOWS", "GUI", "UPARROW", "DOWNARROW", "LEFTARROW", "RIGHTARROW", "TAB" };
         private string[] validCTRLkeys = new string[4] { "BREAK", "PAUSE", "ESCAPE", "ESC" };
         private string[] validAltKeys = new string[6] { "ALT", "END", "ESC", "ESCAPE", "SPACE", "TAB" };

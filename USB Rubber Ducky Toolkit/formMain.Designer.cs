@@ -103,7 +103,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // SetDelayTextBox
             // 
             this.SetDelayTextBox.Enabled = false;
-            this.SetDelayTextBox.Location = new System.Drawing.Point(234, 198);
+            this.SetDelayTextBox.Location = new System.Drawing.Point(234, 205);
             this.SetDelayTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.SetDelayTextBox.Name = "SetDelayTextBox";
             this.SetDelayTextBox.Size = new System.Drawing.Size(199, 38);
@@ -124,7 +124,7 @@ namespace USB_Rubber_Ducky_Toolkit
             // btnExecuteButton
             // 
             this.btnExecuteButton.Enabled = false;
-            this.btnExecuteButton.Location = new System.Drawing.Point(362, 395);
+            this.btnExecuteButton.Location = new System.Drawing.Point(374, 395);
             this.btnExecuteButton.Margin = new System.Windows.Forms.Padding(5);
             this.btnExecuteButton.Name = "btnExecuteButton";
             this.btnExecuteButton.Size = new System.Drawing.Size(238, 51);
@@ -136,10 +136,10 @@ namespace USB_Rubber_Ducky_Toolkit
             // btnDebug
             // 
             this.btnDebug.Enabled = false;
-            this.btnDebug.Location = new System.Drawing.Point(14, 395);
+            this.btnDebug.Location = new System.Drawing.Point(31, 395);
             this.btnDebug.Margin = new System.Windows.Forms.Padding(5);
             this.btnDebug.Name = "btnDebug";
-            this.btnDebug.Size = new System.Drawing.Size(178, 51);
+            this.btnDebug.Size = new System.Drawing.Size(222, 51);
             this.btnDebug.TabIndex = 21;
             this.btnDebug.Text = "Validate Code";
             this.btnDebug.UseVisualStyleBackColor = true;

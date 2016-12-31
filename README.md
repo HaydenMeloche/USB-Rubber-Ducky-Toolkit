@@ -1,7 +1,7 @@
 # USB-Rubber-Ducky-Toolkit
 A toolkit for the USB Rubber ducky
 
-![USB Rubber Ducky Toolkit](https://i.imgur.com/inoUMrw.png)
+![USB Rubber Ducky Toolkit](https://i.imgur.com/5HF0how.png)
 
 ##About
 One day while working on a DuckyScript I realized how annoying it is to test DuckyScripts. I few hours later this project was born.

@@ -115,6 +115,7 @@
             this.Controls.Add(this.btnOutputButton);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "formEncoding";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DuckScript Encoder";
             this.ResumeLayout(false);
             this.PerformLayout();

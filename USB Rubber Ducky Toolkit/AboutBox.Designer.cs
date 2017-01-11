@@ -141,7 +141,7 @@
             this.linkLabel5.Size = new System.Drawing.Size(108, 32);
             this.linkLabel5.TabIndex = 9;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Nick Lit";
+            this.linkLabel5.Text = "Nick Littrell";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // AboutBox

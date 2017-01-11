@@ -128,11 +128,18 @@ namespace USB_Rubber_Ducky_Toolkit
             { //Opens file in notepad
                 try
                 {
-                    System.Diagnostics.Process.Start("notepad.exe", FilePath);
+                    System.Diagnostics.Process.Start("notepad++.exe", FilePath);
                 }
-                catch (IOException ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Problem opening notepad. Error = " + ex);
+                    try
+                    {
+                        System.Diagnostics.Process.Start("notepad.exe", FilePath);
+                    }
+                    catch (Exception exx)
+                    {
+                        MessageBox.Show("Problem opening notepad. Error = " + exx);
+                    }
                 }
                 
             }

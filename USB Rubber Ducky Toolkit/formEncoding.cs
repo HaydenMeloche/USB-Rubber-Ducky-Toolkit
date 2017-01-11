@@ -46,7 +46,7 @@ namespace USB_Rubber_Ducky_Toolkit
             outputName = txtboxFileName.Text;
             Console.WriteLine(FilePath + outputName);
             outPutFilePath = Path.Combine(FilePath, outputName);
-            cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o "+ outPutFilePath);
+            cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o \""+ outPutFilePath + "\"");
             
             
             cmd.StandardInput.Flush();

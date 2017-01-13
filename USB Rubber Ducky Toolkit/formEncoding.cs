@@ -15,6 +15,7 @@ namespace USB_Rubber_Ducky_Toolkit
         string FilePath = "";
         string outPutFilePath = "";
         string outputName = "inject.bin";
+        
         //BUTTONS
         private void btnOutputButton_Click(object sender, EventArgs e)
         {
@@ -33,6 +34,13 @@ namespace USB_Rubber_Ducky_Toolkit
         //END OF BUTTONS
         private void EncodeToBin()
         {
+            if (!File.Exists("script.txt"))
+            {
+                MessageBox.Show("Error. The script was copied to the same location but is now not there. Did you delete it?");
+                Close();
+                return;
+                
+            }
             string outputfilename = txtboxFileName.Text;
             if (outputfilename.Substring(Math.Max(0, outputfilename.Length - 4)) != ".bin" || outputfilename==".bin")
             {

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formEncoding));
             this.txtboxFileName = new System.Windows.Forms.TextBox();
             this.lblDestination = new System.Windows.Forms.Label();
             this.btnEncode = new System.Windows.Forms.Button();
@@ -40,10 +39,10 @@
             // 
             // txtboxFileName
             // 
-            this.txtboxFileName.Location = new System.Drawing.Point(14, 160);
-            this.txtboxFileName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtboxFileName.Location = new System.Drawing.Point(7, 83);
+            this.txtboxFileName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtboxFileName.Name = "txtboxFileName";
-            this.txtboxFileName.Size = new System.Drawing.Size(268, 31);
+            this.txtboxFileName.Size = new System.Drawing.Size(136, 20);
             this.txtboxFileName.TabIndex = 15;
             this.txtboxFileName.Text = "inject.bin";
             this.txtboxFileName.TextChanged += new System.EventHandler(this.txtboxFileName_TextChanged);
@@ -51,10 +50,10 @@
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(291, 162);
-            this.lblDestination.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDestination.Location = new System.Drawing.Point(146, 84);
+            this.lblDestination.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(356, 50);
+            this.lblDestination.Size = new System.Drawing.Size(176, 26);
             this.lblDestination.TabIndex = 14;
             this.lblDestination.Text = "Enter custom name above if desired\r\nExample: mycoolcode.bin\r\n";
             this.lblDestination.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -62,10 +61,10 @@
             // btnEncode
             // 
             this.btnEncode.Enabled = false;
-            this.btnEncode.Location = new System.Drawing.Point(62, 218);
-            this.btnEncode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEncode.Location = new System.Drawing.Point(31, 113);
+            this.btnEncode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEncode.Name = "btnEncode";
-            this.btnEncode.Size = new System.Drawing.Size(219, 56);
+            this.btnEncode.Size = new System.Drawing.Size(110, 29);
             this.btnEncode.TabIndex = 13;
             this.btnEncode.Text = "Encode to Bin FIle";
             this.btnEncode.UseVisualStyleBackColor = true;
@@ -74,30 +73,32 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(5, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(629, 100);
+            this.label2.Size = new System.Drawing.Size(295, 52);
             this.label2.TabIndex = 10;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.label2.Text = "This form will allow you to select the Java compiler java file, \r\nand will do all" +
+    " the dirty work for you. It will temporarily create a\r\nscipt.txt file next to th" +
+    "is exe file.\r\n\r\n";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(142, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(71, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(374, 44);
+            this.label1.Size = new System.Drawing.Size(187, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "DuckyScript Encoder";
             // 
             // btnOutputButton
             // 
-            this.btnOutputButton.Location = new System.Drawing.Point(288, 218);
-            this.btnOutputButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOutputButton.Location = new System.Drawing.Point(144, 113);
+            this.btnOutputButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOutputButton.Name = "btnOutputButton";
-            this.btnOutputButton.Size = new System.Drawing.Size(269, 56);
+            this.btnOutputButton.Size = new System.Drawing.Size(134, 29);
             this.btnOutputButton.TabIndex = 16;
             this.btnOutputButton.Text = "Select Output Location";
             this.btnOutputButton.UseVisualStyleBackColor = true;
@@ -105,16 +106,16 @@
             // 
             // formEncoding
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 281);
+            this.ClientSize = new System.Drawing.Size(320, 146);
             this.Controls.Add(this.txtboxFileName);
             this.Controls.Add(this.lblDestination);
             this.Controls.Add(this.btnEncode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOutputButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formEncoding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DuckScript Encoder";

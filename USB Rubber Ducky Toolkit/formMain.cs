@@ -57,7 +57,7 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
-            File.Copy(FilePath,"script.txt", true); //copy the script to 
+            File.Copy(FilePath,"script.txt", true); //copy the script to exe folder
             formEncoding formEncoding = new formEncoding();
             formEncoding.ShowDialog(); //show encoding form
             if (File.Exists("script.txt"))
@@ -130,7 +130,7 @@ namespace USB_Rubber_Ducky_Toolkit
                 {
                     System.Diagnostics.Process.Start("notepad++.exe", FilePath);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     try
                     {
@@ -156,6 +156,10 @@ namespace USB_Rubber_Ducky_Toolkit
         }
 
         //END OF MENU STRIP
+        public void moveFile()
+        {
+
+        }
 
 
         private void FindFile() //Lets user select script file

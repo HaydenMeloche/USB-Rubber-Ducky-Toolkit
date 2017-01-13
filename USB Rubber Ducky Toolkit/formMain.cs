@@ -40,7 +40,6 @@ namespace USB_Rubber_Ducky_Toolkit
             catch (Exception)
             {
                 MessageBox.Show("Error reading registry. This was done to check if java was installed. Please confirm Java is installed before using the encode form.");
-                throw;
             }
 
         }

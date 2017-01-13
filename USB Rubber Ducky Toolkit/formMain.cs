@@ -25,7 +25,24 @@ namespace USB_Rubber_Ducky_Toolkit
                 MessageBox.Show("Error finding duckencode.jar. Please keep this file in the same folder as this program. The encoding feature has been disabled.");
                 duckEncodeFound = false;
             }
-            
+
+            try
+            {
+                RegistryKey rk = Registry.LocalMachine;
+                RegistryKey subKey = rk.OpenSubKey("SOFTWARE\\JavaSoft\\Java Runtime Environment");
+                string currentVerion = subKey.GetValue("CurrentVersion").ToString();
+                if (currentVerion == null)
+                {
+                    MessageBox.Show("Java was not found on your system. Please confirm that is it installed. Encoding feature has been disabled.");
+                    duckEncodeFound = false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error reading registry. This was done to check if java was installed. Please confirm Java is installed before using the encode form.");
+                throw;
+            }
+
         }
 
         //Variables
@@ -192,7 +209,5 @@ namespace USB_Rubber_Ducky_Toolkit
                 }
             }
         }
-
-        
     }
 }

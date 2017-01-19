@@ -29,9 +29,8 @@ namespace USB_Rubber_Ducky_Toolkit
             try
             {
                 RegistryKey rk = Registry.LocalMachine;
-                RegistryKey subKey = rk.OpenSubKey("SOFTWARE\\JavaSoft\\Java Runtime Environment");
-                string currentVerion = subKey.GetValue("CurrentVersion").ToString();
-                
+                RegistryKey subKey = rk.OpenSubKey("HKEY_LOCAL_MACHINE\\Software\\JavaSoft");
+                                
             }
             catch (Exception)
             {

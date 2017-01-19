@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-
+using WindowsInput;
 
 namespace USB_Rubber_Ducky_Toolkit
 {
@@ -31,15 +31,12 @@ namespace USB_Rubber_Ducky_Toolkit
                 RegistryKey rk = Registry.LocalMachine;
                 RegistryKey subKey = rk.OpenSubKey("SOFTWARE\\JavaSoft\\Java Runtime Environment");
                 string currentVerion = subKey.GetValue("CurrentVersion").ToString();
-                if (currentVerion == null)
-                {
-                    MessageBox.Show("Java was not found on your system. Please confirm that is it installed. Encoding feature has been disabled.");
-                    duckEncodeFound = false;
-                }
+                
             }
             catch (Exception)
             {
-                MessageBox.Show("Error reading registry. This was done to check if java was installed. Please confirm Java is installed before using the encode form.");
+                MessageBox.Show("No java was detected. Any features that require it have been disbaled.");
+                duckEncodeFound = false;
             }
 
         }
@@ -49,6 +46,7 @@ namespace USB_Rubber_Ducky_Toolkit
         public string directoryPath = "";
         private bool duckEncodeFound = true;
         private DuckyScriptProcessing DuckyScriptProcessing = new DuckyScriptProcessing();
+         
         
         //BUTTONS
         private void btnPath_Click(object sender, EventArgs e)
@@ -97,8 +95,17 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnExecuteButton_Click(object sender, EventArgs e)
         {
-            Thread.Sleep(1000); //gives user a second to take hand off mouse
-            DuckyScriptProcessing.ReadFile(FilePath); //emulate code
+            if (File.Exists(FilePath))
+            {
+                Thread.Sleep(500); //gives user a second to take hand off mouse
+                InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.VK_D);
+                Thread.Sleep(500);
+                DuckyScriptProcessing.ReadFile(FilePath); //emulate code
+            } else
+            {
+                MessageBox.Show("Your file " + FilePath + " can longer be found. Please load the script again");
+            }
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)

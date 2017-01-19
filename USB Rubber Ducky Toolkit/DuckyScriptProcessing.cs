@@ -135,10 +135,18 @@ namespace USB_Rubber_Ducky_Toolkit
                     case "WINDOWS":
                     case "GUI":
                         CheckDefaultSleep();
-                        if (Enum.TryParse<VirtualKeyCode>("VK_" + keyboardkey, out code))
+                        if (keyboardkey.Length > 0)
                         {
-                            InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.LWIN, code);
+                            if (Enum.TryParse<VirtualKeyCode>("VK_" + keyboardkey, out code))
+                            {
+                                InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.LWIN, code);
+                            }
                         }
+                        else
+                        {
+                            InputSimulator.SimulateKeyPress(VirtualKeyCode.LWIN);
+                        }
+                        
                         break;
 
                     case "ENTER":
@@ -333,6 +341,10 @@ namespace USB_Rubber_Ducky_Toolkit
                     case "SPACE":
                         CheckDefaultSleep();
                         InputSimulator.SimulateKeyPress(VirtualKeyCode.SPACE);
+                        break;
+                    case "PRINTSCREEN":
+                        CheckDefaultSleep();
+                        InputSimulator.SimulateKeyPress(VirtualKeyCode.PRINT);
                         break;
                 }
             }

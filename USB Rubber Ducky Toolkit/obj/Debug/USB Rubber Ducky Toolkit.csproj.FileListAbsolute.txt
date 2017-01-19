@@ -66,3 +66,14 @@ C:\Users\student.user\Downloads\USB-Rubber-Ducky-Toolkit-master\USB Rubber Ducky
 C:\Users\NickLit\Documents\GitHub\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.exe.config
 C:\Users\NickLit\Documents\GitHub\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.exe
 C:\Users\NickLit\Documents\GitHub\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.pdb
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.exe.config
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.exe
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\bin\Debug\USB Rubber Ducky Toolkit.pdb
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.csprojResolveAssemblyReference.cache
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.AboutBox.resources
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.formEncoding.resources
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.formMain.resources
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB_Rubber_Ducky_Toolkit.Properties.Resources.resources
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.csproj.GenerateResource.Cache
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.exe
+C:\Users\NickLit\USB-Rubber-Ducky-Toolkit\USB Rubber Ducky Toolkit\obj\Debug\USB Rubber Ducky Toolkit.pdb

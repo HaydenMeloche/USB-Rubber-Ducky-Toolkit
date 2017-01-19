@@ -22,7 +22,7 @@ namespace USB_Rubber_Ducky_Toolkit
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 FilePath = folderBrowserDialog1.SelectedPath;
-                Console.WriteLine(FilePath);
+                Console.WriteLine(FilePath+ " Chosen for Output Path");
                 btnEncode.Enabled = true;
             }
         }
@@ -58,9 +58,7 @@ namespace USB_Rubber_Ducky_Toolkit
                 cmd.StartInfo.UseShellExecute = false;
                 cmd.Start();
                 outputName = txtboxFileName.Text;
-                //Console.WriteLine(FilePath + outputName);
                 outPutFilePath = Path.Combine(FilePath, outputName);
-                Console.Out.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o \"" + outPutFilePath + "\"");
                 cmd.StandardInput.WriteLine("java -jar duckencode.jar -i \"" + "script.txt" + "\" -o \"" + outPutFilePath + "\"");
 
 
@@ -68,9 +66,6 @@ namespace USB_Rubber_Ducky_Toolkit
                 cmd.StandardInput.Close();
                 cmd.WaitForExit();
 
-                Console.Out.WriteLine($"Output: {cmd.StandardOutput.ReadToEnd()}");
-                Console.Out.WriteLine($"Error: {cmd.StandardError.ReadToEnd()}");
-                Console.WriteLine(outPutFilePath);
                 MessageBox.Show(File.Exists(outPutFilePath) ? "Bin file created sucessfully." : "Error creating file. Possible file permissions problem. Try running program in admin privleges");
                 outPutFilePath = "";
             }

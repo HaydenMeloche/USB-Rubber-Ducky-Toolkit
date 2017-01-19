@@ -73,13 +73,14 @@ namespace USB_Rubber_Ducky_Toolkit
 
         private void btnEncodeForm_Click(object sender, EventArgs e)
         {
+            
+            File.Copy(FilePath,"script.txt", true); //copy the script to exe folder
+            formEncoding formEncoding = new formEncoding();
+            formEncoding.ShowDialog(); //show encoding form
             if (File.Exists("script.txt"))
             {
                 File.Delete("script.txt");
             }
-            File.Copy(FilePath,"script.txt", true); //copy the script to exe folder
-            formEncoding formEncoding = new formEncoding();
-            formEncoding.ShowDialog(); //show encoding form
         }
 
         private void btnDebug_Click(object sender, EventArgs e)
